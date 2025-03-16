@@ -30,9 +30,9 @@ cipher = Fernet(encryption_key)
 
 
 # Email Configuration
-EMAIL_ADDRESS =  "km4588669@gmail.com" 
+EMAIL_ADDRESS =  "From mail" 
 EMAIL_PASSWORD = "hibf wuwq jggm szan"
-SEND_TO_EMAIL = "mounesh.ad22@bitsathy.ac.in"
+SEND_TO_EMAIL = "To email"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
