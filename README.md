@@ -1,6 +1,5 @@
 # Advanced Keylogger  
-
-This project is an advanced keylogger that captures keystrokes, takes screenshots, logs system activity, and encrypts data. It also integrates a machine learning model for anomaly detection.  
+The **Advanced Keylogger with Machine Learning** is a powerful monitoring tool designed for **security research and behavioral analysis**, integrating **keystroke logging, periodic screenshots, system activity tracking, and real-time anomaly detection** using an **SVM-based machine learning model**. The system records keystrokes, captures screenshots at intervals, logs active window titles, and gathers system information, ensuring comprehensive monitoring. Data encryption using **Fernet cryptography** secures logs before storage or email transmission. The **Tkinter-based GUI** allows users to **start and stop logging** with a single click, preventing unauthorized execution. Multi-threading ensures smooth operation, while **email reporting** automates log delivery. The included **ML model (ml_model.py) must be trained before execution**, enabling behavioral anomaly detection. This project is ideal for **cybersecurity research, user behavior analysis, and keylogging detection studies**. 
 
 ## **Features**  
 - **Records Keystrokes**: Logs all keystrokes in real-time.  
